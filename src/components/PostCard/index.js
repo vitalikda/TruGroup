@@ -4,15 +4,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const PostCard = ({posts}) => {
+const PostCard = ({ posts }) => {
   return (
     <div className='container'>
       {posts
         .filter(post => post.node.frontmatter.templateKey === 'article-page')
-        .map(({node: post}) => (
+        .map(({ node: post }) => (
           <div
             className='content'
-            style={{border: '1px solid #eaecee', padding: '2em 4em'}}
+            style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
             key={post.id}
           >
             <p>
@@ -27,7 +27,7 @@ const PostCard = ({posts}) => {
               <br />
               <br />
               <Link className='button is-small' to={post.fields.slug}>
-                                Keep Reading →
+                Keep Reading →
               </Link>
             </p>
           </div>
