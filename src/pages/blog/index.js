@@ -1,21 +1,18 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Helmet from 'react-helmet'
 import PostCard from '../../components/PostCard'
 
 export default class BlogPage extends Component {
-  render () {
-    const {data} = this.props
-    const {edges: posts} = data.allMarkdownRemark
+  render() {
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div>
         <Helmet>
-          <title>Blog | Gatsby Starter Business</title>
+          <title>Blog | Rug Cleaning Toronto</title>
         </Helmet>
         <section className='hero is-primary is-bold'>
           <div className='hero-body'>
@@ -24,7 +21,7 @@ export default class BlogPage extends Component {
                 <div className='column is-10 is-offset-1'>
                   <div className='section'>
                     <h1 className='title'>
-                                            Blog
+                      Blog
                     </h1>
                   </div>
                 </div>

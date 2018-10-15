@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 module.exports = {
   siteTitle: 'Rug Cleaning Toronto', // Site title.
   siteTitleAlt: 'Rug Cleaning and Upholstery cleaning in Toronto, ON', // Alternative site title for SEO.
