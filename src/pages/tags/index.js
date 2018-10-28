@@ -1,49 +1,56 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
+import Layout from '../../components/layouts'
 
 const TagsPage = ({
-  data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
+  data: {
+    allMarkdownRemark: { group },
+    site: { siteMetadata: { title }
+    } },
 }) => (
-    <div>
-      <Helmet title={`Tags | ${title}`} />
-      <section className='hero is-primary is-bold'>
-        <div className='hero-body'>
-          <div className='container'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='section'>
-                  <h1 className='title'>
-                    Tags
+    <Layout>
+      <div>
+        <Helmet title={`Tags | ${title}`} />
+        <section className='hero is-primary is-bold'>
+          <div className='hero-body'>
+            <div className='container'>
+              <div className='columns'>
+                <div className='column is-10 is-offset-1'>
+                  <div className='section'>
+                    <h1 className='title'>
+                      Tags
                 </h1>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='container content'>
-          <div className='columns'>
-            <div
-              className='column is-10 is-offset-1'
-              style={{ marginBottom: '6rem' }}
-            >
-              <ul className='taglist'>
-                {group.map(tag => (
-                  <li key={tag.fieldValue}>
-                    <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                      {tag.fieldValue} ({tag.totalCount})
+        </section>
+        <section className='section'>
+          <div className='container content'>
+            <div className='columns'>
+              <div
+                className='column is-10 is-offset-1'
+                style={{ marginBottom: '6rem' }}
+              >
+                <ul className='taglist'>
+                  {group.map(tag => (
+                    <li key={tag.fieldValue}>
+                      <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                        {tag.fieldValue} ({tag.totalCount})
                   </Link>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </Layout>
   )
 
 export default TagsPage

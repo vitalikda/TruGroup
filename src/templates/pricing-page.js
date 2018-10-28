@@ -1,7 +1,9 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Pricing from '../components/Pricing'
+import Layout from '../components/layouts'
 
 export const PricingPageTemplate = ({
   title,
@@ -9,45 +11,47 @@ export const PricingPageTemplate = ({
   meta_description,
   pricing,
 }) => (
-  <div>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
-    <section className='hero is-primary is-bold'>
-      <div className='hero-body'>
-        <div className='container'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <h1 className='title'>
-                  {title}
-                </h1>
+    <Layout>
+      <div>
+        <Helmet>
+          <title>{meta_title}</title>
+          <meta name='description' content={meta_description} />
+        </Helmet>
+        <section className='hero is-primary is-bold'>
+          <div className='hero-body'>
+            <div className='container'>
+              <div className='columns'>
+                <div className='column is-10 is-offset-1'>
+                  <div className='section'>
+                    <h1 className='title'>
+                      {title}
+                    </h1>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section className='section section--gradient'>
-      <div className='container'>
-        <div className='section'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <h2 className='has-text-weight-semibold is-size-2'>
-                  {pricing.heading}
-                </h2>
-                <p className='is-size-5'>{pricing.description}</p>
-                <Pricing data={pricing.plans} />
+        </section>
+        <section className='section section--gradient'>
+          <div className='container'>
+            <div className='section'>
+              <div className='columns'>
+                <div className='column is-10 is-offset-1'>
+                  <div className='content'>
+                    <h2 className='has-text-weight-semibold is-size-2'>
+                      {pricing.heading}
+                    </h2>
+                    <p className='is-size-5'>{pricing.description}</p>
+                    <Pricing data={pricing.plans} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
-  </div>
-)
+    </Layout>
+  )
 
 PricingPageTemplate.propTypes = {
   title: PropTypes.string,
@@ -60,8 +64,8 @@ PricingPageTemplate.propTypes = {
   }),
 }
 
-const PricingPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+const PricingPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
 
   return (
     <PricingPageTemplate

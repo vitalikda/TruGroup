@@ -51,7 +51,6 @@ module.exports = {
         enableIdentityWidget: true,
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -92,6 +91,7 @@ module.exports = {
       },
 
     },
+    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-plugin-feed',
       options: {

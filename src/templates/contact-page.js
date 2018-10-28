@@ -1,10 +1,9 @@
-/**
- * Created by vaibhav on 2/4/18
- */
 import React from 'react'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Contact from '../components/Contact'
+import Layout from '../components/layouts'
 
 export const ContactPageTemplate = ({
   title,
@@ -14,37 +13,39 @@ export const ContactPageTemplate = ({
   contacts,
 }) => {
   return (
-    <div>
-      <Helmet>
-        <title>{meta_title}</title>
-        <meta name='description' content={meta_description} />
-      </Helmet>
-      <section className='hero is-primary is-bold'>
-        <div className='hero-body'>
-          <div className='container'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='section'>
-                  <h1 className='title'>
-                    {title}
-                  </h1>
-                  <h2 className='subtitle'>
-                    {subtitle}
-                  </h2>
+    <Layout>
+      <div>
+        <Helmet>
+          <title>{meta_title}</title>
+          <meta name='description' content={meta_description} />
+        </Helmet>
+        <section className='hero is-primary is-bold'>
+          <div className='hero-body'>
+            <div className='container'>
+              <div className='columns'>
+                <div className='column is-10 is-offset-1'>
+                  <div className='section'>
+                    <h1 className='title'>
+                      {title}
+                    </h1>
+                    <h2 className='subtitle'>
+                      {subtitle}
+                    </h2>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='container'>
-          {contacts.map((contact, id) =>
-            <Contact key={id} email={contact.email} description={contact.description} />
-          )}
-        </div>
-      </section>
-    </div>
+        </section>
+        <section className='section'>
+          <div className='container'>
+            {contacts.map((contact, id) =>
+              <Contact key={id} email={contact.email} description={contact.description} />
+            )}
+          </div>
+        </section>
+      </div>
+    </Layout>
   )
 }
 
@@ -57,8 +58,8 @@ ContactPageTemplate.propTypes = {
 
 }
 
-const ContactPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+const ContactPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
   return (
     <ContactPageTemplate
       title={frontmatter.title}

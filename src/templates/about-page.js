@@ -1,40 +1,48 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Content, {HTMLContent} from '../components/Content'
+import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/layouts'
 
-export const AboutPageTemplate = ({title, content, contentComponent}) => {
+export const AboutPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content
 
   return (
-    <div>
-      <section className='hero is-primary is-bold'>
-        <div className='hero-body'>
-          <div className='container'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='section'>
-                  <h1 className='title'>
-                    {title}
-                  </h1>
+    <Layout>
+      <div>
+        <section className='hero is-primary is-bold'>
+          <div className='hero-body'>
+            <div className='container'>
+              <div className='columns'>
+                <div className='column is-10 is-offset-1'>
+                  <div className='section'>
+                    <h1 className='title'>
+                      {title}
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className='section section--gradient'>
-        <div className='container'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <PageContent className='content' content={content} />
+        </section>
+        <section className='section section--gradient'>
+          <div className='container'>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='section'>
+                  <PageContent className='content' content={content} />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </Layout>
   )
 }
 
@@ -44,8 +52,8 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({data}) => {
-  const {markdownRemark: post} = data
+const AboutPage = ({ data }) => {
+  const { markdownRemark: post } = data
 
   return (
     <div>
