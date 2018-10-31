@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Offerings from '../components/Offerings'
+import Services from '../components/Services'
 import Testimonials from '../components/Testimonials'
 import Layout from '../components/layouts'
 
@@ -10,7 +10,7 @@ export const HomePageTemplate = ({
   title,
   heading,
   description,
-  offerings,
+  services,
   meta_title,
   meta_description,
   testimonials,
@@ -49,8 +49,7 @@ export const HomePageTemplate = ({
                       </h3>
                       <p>{description}</p>
                     </div>
-                    <Offerings gridItems={offerings.blurbs} />
-                    <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
+                    <Services gridItems={services.blurbs} />
                     <Testimonials testimonials={testimonials} />
                   </div>
                 </div>
@@ -68,7 +67,7 @@ HomePageTemplate.propTypes = {
   meta_description: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
-  offerings: PropTypes.shape({
+  services: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
@@ -85,7 +84,7 @@ const HomePage = ({ data }) => {
       meta_description={frontmatter.meta_description}
       heading={frontmatter.heading}
       description={frontmatter.description}
-      offerings={frontmatter.offerings}
+      services={frontmatter.services}
       testimonials={frontmatter.testimonials}
     />
   )
@@ -110,10 +109,11 @@ export const pageQuery = graphql`
         meta_description
         heading
         description
-        offerings {
+        services {
           blurbs {
             image
             text
+            title
           }
         }
         testimonials {

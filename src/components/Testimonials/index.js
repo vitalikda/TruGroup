@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 const Testimonials = ({testimonials}) => (
   <div>
     {testimonials.map((testimonial, id) => (
-      <article className='message' key={id}>
+      <article className='message is-primary' key={id}>
         <div className='message-body'>
           {testimonial.quote}
           <br />
-          <cite> – {testimonial.author}</cite>
+          <br />
+          <cite>{testimonial.author}</cite>
         </div>
       </article>
     ))}
