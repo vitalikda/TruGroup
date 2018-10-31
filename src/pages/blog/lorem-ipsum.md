@@ -1,9 +1,9 @@
 ---
 templateKey: article-page
-title: Lorem Ipsum
+title: This is your second post
 slug: Lorem-Ipsum-123
-date: 2018-10-28T13:22:31.175Z
-cover: /img/coffee.png
+date: 2016-05-10T13:22:00.000Z
+cover: /img/179fef22037d45a3ac69ade4936dcb75.jpg
 tags:
   - Lorem
   - Ipsum
@@ -11,12 +11,7 @@ tags:
 meta_title: Lorem Ipsum
 meta_description: Lorem Ipsum is Lorem Ipsum.
 ---
-Fuga odit saepe consequatur sunt odio consequatur. Libero ipsam ipsum sed quas. Ut consequatur quos eos laboriosam esse sed sapiente ex. Quia architecto unde voluptatem velit hic. Ipsa quos libero repudiandae autem ut tempore. Asperiores voluptatem repudiandae ullam odio.
+This is your blog post. Blogs are a great way to connect with your audience and keep them coming back. They can also be a great way to position yourself as an authority in your field. To edit your content, simply click here to open the Blog Manager. From the Blog Manager you can edit posts and also add a brand new post in a breeze.
 
-Est cum voluptatum ut veritatis possimus eligendi. Explicabo perspiciatis libero voluptatem. Minus a recusandae culpa et non. Et voluptates est laboriosam dolorum velit eligendi nemo ut.
 
-Quisquam soluta maiores omnis quo unde veritatis quaerat saepe. Ducimus tempore in doloribus autem tenetur. Laboriosam necessitatibus expedita tempore quia. Doloremque aut maiores quis. Iusto eius impedit ipsa explicabo fugit.
-
-Id culpa quis et quisquam. Eum vel nisi iste repudiandae recusandae. Qui esse exercitationem harum. Ipsa cumque tempora accusamus hic fugiat. Dolorem voluptatem qui fugiat facilis qui soluta illum porro.
-
-Deleniti et nisi temporibus illo magnam sit. Aut hic voluptatem totam expedita maxime porro ducimus ut. Quo dolor quae et fuga eos natus.
+Great looking images make your blog posts more visually compelling for your audience, so choose images that really wow. Adding fun and compelling videos is another great way to engage your audience and keep them coming back for more. And to organize your posts according to subject-matter, define a ‘Category’ for each post in the Blog Manager.
