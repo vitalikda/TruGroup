@@ -40,7 +40,7 @@ export const ContactPageTemplate = ({
         <section className='section'>
           <div className='container'>
             {contacts.map((contact, id) =>
-              <Contact key={id} email={contact.email} description={contact.description} />
+              <Contact key={id} address={contact.address} email={contact.email} phone={contact.phone} description={contact.description} />
             )}
           </div>
         </section>
@@ -91,7 +91,9 @@ export const contactPageQuery = graphql`
         meta_description
         heading
         contacts {
+          address
           email
+          phone
           description
         }
       }
