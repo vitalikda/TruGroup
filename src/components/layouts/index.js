@@ -11,6 +11,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet>
       <title>{config.siteTitle}</title>
       <meta name='description' content={config.siteDescription} />
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </Helmet>
     <NavBar />
     <div>{children}</div>
