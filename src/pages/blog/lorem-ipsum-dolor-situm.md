@@ -1,30 +1,20 @@
 ---
 templateKey: article-page
-title: Lorem Ipsum Dolor Situm
+title: This is your first post
 slug: lorem-ipsum-dolor-situm
-date: 2018-03-29T03:55:49.370Z
-cover: /img/products-grid3.jpg
+date: 2016-05-09T03:55:00.000Z
+cover: /img/58d10ca605004dc5a700dd497e106075.jpg
+tags:
+  - lorem
+  - ipsum
 meta_title: Lorem Ipsum Dolor Situm
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
   venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
   consectetur purus sit amet fermentum.
-tags:
-  - lorem
-  - ipsum
 ---
+This is your blog post. Blogs are a great way to connect with your audience and keep them coming back. They can also be a great way to position yourself as an authority in your field. To edit your content, simply click here to open the Blog Manager. From the Blog Manager you can edit posts and also add a brand new post in a breeze.
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-
-## Most Amazing Blogging Experience.
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-
-Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+To make it easy for visitors to search your blog according to topic, add 'Tags' to your posts in the Blog Manager.  You can showcase the very best posts from your blog by setting a post as a Featured Post. Just click the star icon next to the Post title to define it as a Featured Post. It’s a great, easy way to promote specific content in your blog.
