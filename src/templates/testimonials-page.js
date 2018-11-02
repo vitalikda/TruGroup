@@ -3,20 +3,14 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
+import Testimonials from '../components/Testimonials'
 import Layout from '../components/layouts'
-// import Services from '../components/Services'
-// import Testimonials from '../components/Testimonials'
 
-// import Services from './services-page'
-// import Testimonials from './testimonials-page'
-
-
-export const HomePageTemplate = ({
+export const TestimonialsPageTemplate = ({
   title,
-  heading,
-  description,
   meta_title,
   meta_description,
+  testimonials,
 }) => (
     <Layout>
       <div>
@@ -45,14 +39,7 @@ export const HomePageTemplate = ({
               <div className='columns'>
                 <div className='column is-10 is-offset-1'>
                   <div className='content'>
-                    <div>
-                      <h3 className='has-text-weight-semibold is-size-2'>
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                    {/* <Services /> */}
-                    {/* <Testimonials /> */}
+                    <Testimonials testimonials={testimonials} />
                   </div>
                 </div>
               </div>
@@ -63,29 +50,27 @@ export const HomePageTemplate = ({
     </Layout>
   )
 
-HomePageTemplate.propTypes = {
+TestimonialsPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
+  testimonials: PropTypes.array,
 }
 
-const HomePage = ({ data }) => {
+const TestimonialsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <HomePageTemplate
+    <TestimonialsPageTemplate
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
+      testimonials={frontmatter.testimonials}
     />
   )
 }
 
-HomePage.propTypes = {
+TestimonialsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -93,17 +78,19 @@ HomePage.propTypes = {
   }),
 }
 
-export default HomePage
+export default TestimonialsPage
 
 export const pageQuery = graphql`
-  query IndexPage($id: String!) {
+  query TestimonialsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         meta_title
         meta_description
-        heading
-        description
+        testimonials {
+          author
+          quote
+        }
       }
     }
   }

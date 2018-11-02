@@ -2,19 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
+import Services from '../components/Services'
 import Layout from '../components/layouts'
-// import Services from '../components/Services'
-// import Testimonials from '../components/Testimonials'
 
-// import Services from './services-page'
-// import Testimonials from './testimonials-page'
-
-
-export const HomePageTemplate = ({
+export const ServicesPageTemplate = ({
   title,
-  heading,
-  description,
+  services,
   meta_title,
   meta_description,
 }) => (
@@ -41,18 +34,12 @@ export const HomePageTemplate = ({
         </section>
         <section className='section section--gradient'>
           <div className='container'>
+
             <div className='section'>
               <div className='columns'>
                 <div className='column is-10 is-offset-1'>
                   <div className='content'>
-                    <div>
-                      <h3 className='has-text-weight-semibold is-size-2'>
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                    {/* <Services /> */}
-                    {/* <Testimonials /> */}
+                    <Services gridItems={services.blurbs} />
                   </div>
                 </div>
               </div>
@@ -63,29 +50,29 @@ export const HomePageTemplate = ({
     </Layout>
   )
 
-HomePageTemplate.propTypes = {
+ServicesPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
+  services: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 }
 
-const HomePage = ({ data }) => {
+const ServicesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <HomePageTemplate
+    <ServicesPageTemplate
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
+      services={frontmatter.services}
     />
   )
 }
 
-HomePage.propTypes = {
+ServicesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -93,17 +80,22 @@ HomePage.propTypes = {
   }),
 }
 
-export default HomePage
+export default ServicesPage
 
 export const pageQuery = graphql`
-  query IndexPage($id: String!) {
+  query ServicesPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         meta_title
         meta_description
-        heading
-        description
+        services {
+          blurbs {
+            image
+            text
+            title
+          }
+        }
       }
     }
   }
