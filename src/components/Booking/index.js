@@ -7,7 +7,7 @@ import 'flatpickr/dist/flatpickr.css' // Path to Flatpickr's theme 'flatpickr/di
 const Booking = () => {
   return (
     <section>
-      <form name="booking" method="post" action="/success" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="booking" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 
         <input type="hidden" name="bot-field" />
 
