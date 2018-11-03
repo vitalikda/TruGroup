@@ -14,7 +14,7 @@ class Booking extends Component {
 
   render() {
     const { date } = this.state;
-    
+
     return (
       <section>
         <form name="booking" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
@@ -25,6 +25,7 @@ class Booking extends Component {
               <input
                 className="input"
                 type="text"
+                name="name"
                 placeholder="Your Name" />
             </div>
           </div>
@@ -34,6 +35,7 @@ class Booking extends Component {
               <input
                 className="input"
                 type="email"
+                name="email"
                 placeholder="Your Email" />
             </div>
           </div>
@@ -55,13 +57,14 @@ class Booking extends Component {
                 }}
                 className="input"
                 type="text"
+                name="date"
                 placeholder="Select Date..." />
             </div>
           </div>
           <div className="field">
             <label className="label">Message</label>
             <div className="control">
-              <textarea className="textarea" placeholder="Message"></textarea>
+              <textarea className="textarea" name="message" placeholder="Message"></textarea>
             </div>
           </div>
           <div className="field is-grouped">
