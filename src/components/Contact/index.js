@@ -8,16 +8,16 @@ const Contact = ({ address, email, phone, description }) => {
       style={{ border: '1px solid #eaecee', padding: '2em 4em' }}>
       <address>
         {address}
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href={`mailto:${email}`}>{email}</a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href={`tel:${phone}`}>{phone}</a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         {description}
-        <br/>
+        <br />
       </address>
     </div>
   )
