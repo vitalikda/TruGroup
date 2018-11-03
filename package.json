@@ -5,6 +5,7 @@
   "author": "Vaibhav Sharma",
   "dependencies": {
     "bulma": "^0.7.2",
+    "flatpickr": "^4.5.2",
     "gatsby": "^2.0.0",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-google-tagmanager": "^2.0.5",
@@ -29,6 +30,7 @@
     "react": "^16.5.2",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.5.2",
+    "react-flatpickr": "^3.6.4",
     "react-helmet": "^5.2.0",
     "react-share": "^2.3.1"
   },

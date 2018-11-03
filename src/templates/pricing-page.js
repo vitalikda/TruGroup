@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Pricing from '../components/Pricing'
 import Layout from '../components/layouts'
 
+import Booking from '../components/Booking'
+
 export const PricingPageTemplate = ({
   title,
   meta_title,
@@ -43,6 +45,17 @@ export const PricingPageTemplate = ({
                   <p className='is-size-5'>{pricing.description}</p>
                   <Pricing data={pricing.plans} />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='section section--gradient'>
+        <div className='container'>
+          <div className='columns'>
+            <div className='column is-10 is-offset-1'>
+              <div className='section'>
+                <Booking />
               </div>
             </div>
           </div>
