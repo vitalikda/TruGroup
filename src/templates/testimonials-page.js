@@ -13,40 +13,38 @@ export const TestimonialsPageTemplate = ({
   testimonials,
 }) => (
     <Layout>
-      <div>
-        <Helmet>
-          <title>{meta_title}</title>
-          <meta name='description' content={meta_description} />
-        </Helmet>
-        <section className='hero is-primary is-bold'>
-          <div className='hero-body'>
-            <div className='container'>
-              <div className='columns'>
-                <div className='column is-10 is-offset-1'>
-                  <div className='section'>
-                    <h1 className='title'>
-                      {title}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className='section section--gradient'>
+      <Helmet>
+        <title>{meta_title}</title>
+        <meta name='description' content={meta_description} />
+      </Helmet>
+      <section className='hero is-primary is-bold'>
+        <div className='hero-body'>
           <div className='container'>
-            <div className='section'>
-              <div className='columns'>
-                <div className='column is-10 is-offset-1'>
-                  <div className='content'>
-                    <Testimonials testimonials={testimonials} />
-                  </div>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='section'>
+                  <h1 className='title'>
+                    {title}
+                  </h1>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section className='section section--gradient'>
+        <div className='container'>
+          <div className='section'>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='content'>
+                  <Testimonials testimonials={testimonials} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 
