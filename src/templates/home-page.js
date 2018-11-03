@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layouts'
-// import Services from '../components/Services'
-// import Testimonials from '../components/Testimonials'
+import Services from '../components/Services'
+import Testimonials from '../components/Testimonials'
 
 // import Services from './services-page'
-// import Testimonials from './testimonials-page'
+// import TestimonialsPage from './testimonials-page'
 
 
 export const HomePageTemplate = ({
@@ -17,49 +17,49 @@ export const HomePageTemplate = ({
   description,
   meta_title,
   meta_description,
+  services,
+  testimonials,
 }) => (
     <Layout>
-      <div>
-        <Helmet>
-          <title>{meta_title}</title>
-          <meta name='description' content={meta_description} />
-        </Helmet>
-        <section className='hero is-primary is-bold'>
-          <div className='hero-body'>
-            <div className='container'>
-              <div className='columns'>
-                <div className='column is-10 is-offset-1'>
-                  <div className='section'>
-                    <h1 className='title'>
-                      {title}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className='section section--gradient'>
+      <Helmet>
+        <title>{meta_title}</title>
+        <meta name='description' content={meta_description} />
+      </Helmet>
+      <section className='hero is-primary is-bold'>
+        <div className='hero-body'>
           <div className='container'>
-            <div className='section'>
-              <div className='columns'>
-                <div className='column is-10 is-offset-1'>
-                  <div className='content'>
-                    <div>
-                      <h3 className='has-text-weight-semibold is-size-2'>
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                    {/* <Services /> */}
-                    {/* <Testimonials /> */}
-                  </div>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='section'>
+                  <h1 className='title'>
+                    {title}
+                  </h1>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section className='section section--gradient'>
+        <div className='container'>
+          <div className='section'>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='content'>
+                  <div>
+                    <h3 className='has-text-weight-semibold is-size-2'>
+                      {heading}
+                    </h3>
+                    <p>{description}</p>
+                  </div>
+                  <Services gridItems={services.blurbs} />
+                  <Testimonials testimonials={testimonials} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 
@@ -69,6 +69,10 @@ HomePageTemplate.propTypes = {
   meta_description: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
+  services: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
+  testimonials: PropTypes.array,
 }
 
 const HomePage = ({ data }) => {
@@ -81,6 +85,8 @@ const HomePage = ({ data }) => {
       meta_description={frontmatter.meta_description}
       heading={frontmatter.heading}
       description={frontmatter.description}
+      services={data.allServices.edges[0].node.frontmatter.services}
+      testimonials={data.allTestimonials.edges[0].node.frontmatter.testimonials}
     />
   )
 }
@@ -104,6 +110,35 @@ export const pageQuery = graphql`
         meta_description
         heading
         description
+      }
+    }
+    allServices: allMarkdownRemark(filter: { id: { eq: "4340bb85-6752-5337-835a-1bf649b590b2" } } ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            services {
+              blurbs {
+                image
+                title
+                text
+              }
+            }
+          }
+        }
+      }
+    }
+    allTestimonials: allMarkdownRemark(filter: { id: { eq: "57003724-62f7-5162-b999-66900aed715d" } } ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            testimonials {
+              author
+              quote
+            }
+          }
+        }
       }
     }
   }
