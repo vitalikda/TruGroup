@@ -112,7 +112,9 @@ export const pageQuery = graphql`
         description
       }
     }
-    allServices: allMarkdownRemark(filter: { id: { eq: "4340bb85-6752-5337-835a-1bf649b590b2" } } ) {
+    allServices: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "services-page" } } } 
+    ) {
       edges {
         node {
           id
@@ -128,7 +130,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allTestimonials: allMarkdownRemark(filter: { id: { eq: "57003724-62f7-5162-b999-66900aed715d" } } ) {
+    allTestimonials: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "testimonials-page" } } } 
+    ) {
       edges {
         node {
           id
