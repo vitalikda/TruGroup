@@ -1,19 +1,19 @@
 module.exports = {
-  siteTitle: 'Rug Cleaning Toronto', // Site title.
-  siteTitleAlt: 'Rug Cleaning and Upholstery cleaning in Toronto, ON', // Alternative site title for SEO.
+  siteTitle: 'Tru Group', // Site title.
+  siteTitleAlt: 'Scholarships in US universities.', // Alternative site title for SEO.
   siteLogo: '/icons/icon-512x512.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://rug-cleaning.netlify.com', // Domain of your website without pathPrefix.
+  siteUrl: 'https://trugroup.netlify.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
-  siteDescription: 'Best quality and prices for toronto rug cleaning services. Call and compare! We provide rug, upholstery cleaning, furniture cleaning services in all Toronto and GTA area.', // Website description used for RSS feeds/meta description tag.
+  siteDescription: 'Scholarships in US universities.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml',
   siteFBAppID: '', // FB Application ID for using app insights
   googleTagManagerID: '', // GTM tracking ID.
-  disqusShortname: 'rug-cleaning', // Disqus shortname.
-  userName: ' Ahmet Kul',
-  userTwitter: 'felsefy',
-  userLocation: 'Toronto, ON, Canada',
+  disqusShortname: 'Tru-Group', // Disqus shortname.
+  userName: 'Tru Group',
+  userTwitter: '',
+  userLocation: 'USA',
   userDescription: '',
-  copyright: 'Copyright © Rug Cleaning Toronto 2018. All Rights Reserved.', // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#C8AE79;', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#FFFFFF', // Used for setting manifest background color.
+  copyright: 'Copyright © Tru Group USA 2018. All Rights Reserved.', // Copyright string for the footer of the website and RSS feed.
+  themeColor: '#5E81FE;', // Used for setting manifest and progress theme colors.
+  backgroundColor: '#F5F8FF', // Used for setting manifest background color.
 }
