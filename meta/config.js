@@ -7,7 +7,7 @@ module.exports = {
   siteDescription: 'Scholarships in US universities.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml',
   siteFBAppID: '', // FB Application ID for using app insights
-  googleTagManagerID: '', // GTM tracking ID.
+  googleTagManagerID: 'GTM-KQ4X8N8', // GTM tracking ID.
   disqusShortname: 'Tru-Group', // Disqus shortname.
   userName: 'Tru Group',
   userTwitter: '',
