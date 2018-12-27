@@ -1,47 +1,249 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import "/_spacing"
 
 // Import Font Awesome
 @import "~@fortawesome/fontawesome-free/css/all.css"
 
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Quicksand')
+
+// Brand colors
+$blue: #5E81FE
+$blue-dark: #3D4F9F
+$blue-light: #D2E1FF
+
 // Global variables
-$primary: #C8AE79
-$primary-invert: #FFFFFF
-$widescreen-enabled: false
-$fullhd-enabled: false
+$family-sans-serif: "Quicksand", sans-serif
+$primary: $blue
+$text: $blue-dark
+$control-radius: $radius-small
 
-// nav
-//   border-bottom: lightgray solid 0.1vmin
+// Space helpers
+.spacer 
+  background-color: transparent !important
+.section-header
+  padding-bottom: 6rem !important
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+// Navbar
+$navbar-height: 5rem
+$navbar-item-color: $blue-dark
+$navbar-box-shadow-color: #D8E3FE
+.navbar
+  font-weight: 500
+  font-size: 12px
+  letter-spacing: 0.05em
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 5em -50vw
+.box-shadow
+  box-shadow: 0 1px 0 0 #D8E3FE
+
+// Bran Logo
+.logo
+  color: $primary !important
+  .logo-item
+    background: $primary
+    color: $white
+    padding: 2px 10px
+    margin-right: 5px 
+
+// Add new button
+.button-sec
+  background-color: $blue-light !important
+  color: $primary !important
+  border: 0 !important
+  padding: 20px !important
+
+.has-bg-img 
+  background: url('/img/hero-img.png') center center // matese-fields-233175-unsplash.jpg
   background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+  background-repeat: no-repeat
+  background-color: #F5F8FF
 
-.margin-top-0
-  margin-top: 0 !important
+.title
+  font-family: Quicksand
+  color: $blue-dark !important
+  padding: 1rem 0
 
+.subtitle
+  font-family: Roboto
+  color: #8D96BD !important
+  max-width: 500px !important
+  padding: 1rem 0
+
+//Custom indexes
+#features
+  $bg-color: #F5F8FF
+  $txt-color: #8D96BD
+  background-color: $bg-color
+  .icon
+    background-color: #FFF
+    border-radius: 50%
+    height: 5rem
+    width: 5rem
+  .header
+    color: #4074F8 !important
+    font-weight: 600
+  p 
+    color: $txt-color !important
+    margin-top: 0.75rem
+  .is-divider
+    max-width: 100px
+    display: block
+    position: relative
+    border-top: .1rem solid #DAE4FE
+    height: .1rem
+    margin: 2rem auto
+    text-align: center
+  .is-divider[data-content]::after
+    background: $bg-color
+    display: inline-block
+    padding: .4rem .8rem
+    -webkit-transform: translateY(-1.1rem)
+    -ms-transform: translateY(-1.1rem)
+    transform: translateY(-1.1rem)
+    font-family: Open Sans
+    font-weight: 600
+    line-height: 1.18rem
+    font-size: .68rem
+    text-align: center
+    color: $txt-color
+    content: attr(data-content)
+
+#requirements 
+  .column-yes
+    background: linear-gradient(220.04deg, #6888FF 12.77%, #5E80FF 73.11%)
+    .icon
+      border: 4px solid #FFFFFF
+      border-radius: 50%
+      box-sizing: border-box
+      height: 3rem
+      width: 3rem
+      padding: 8px
+    .header
+      line-height: 5.18rem !important
+      font-size: 3rem !important
+      text-align: right !important
+      letter-spacing: 0.03em !important
+      color: #FFFFFF !important
+    p 
+      margin-top: 0.75rem
+      font-weight: 500 !important
+      line-height: 1,43rem !important
+      font-size: 1,12rem !important
+      text-align: right !important
+      letter-spacing: 0.03em !important
+      color: #FFFFFF !important
+  .column-no
+    background: linear-gradient(119.35deg, #E9EFFF 41.56%, #E0E9FF 81.53%)
+    .icon
+      border: 4px solid #5E80FF
+      border-radius: 50%
+      box-sizing: border-box
+      height: 3rem
+      width: 3rem
+      padding: 10px
+    .header
+      line-height: 5.18rem !important
+      font-size: 3rem !important
+      letter-spacing: 0.03em !important
+      color: #5E80FF !important
+    p 
+      margin-top: 0.75rem
+      font-weight: 500 !important
+      line-height: 1,43rem !important
+      font-size: 1,12rem !important
+      letter-spacing: 0.03em !important
+      color: #5E80FF !important
+
+#blog
+  background-color: #F5F8FF
+  .box
+    border: 1px solid #D8E3FE !important
+    box-sizing: border-box !important
+    box-shadow: 0px 15px 50px #EFF4FF !important
+  img
+    box-shadow: 0px 15px 100px #E5EBF8
+    border-radius: 5px      
+  .header
+    font-size: 2.25rem !important
+    color: #3D4F9F !important
+    line-height: 2.5rem !important
+  p
+    font-family: Roboto !important
+    line-height: 1.68rem !important
+    font-size: 0.87rem !important
+    letter-spacing: 0.03em !important
+    color: #8D96BD !important
+
+#testimonials
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%)
+  .box
+    border: 1px solid #D8E3FE !important
+    box-sizing: border-box !important
+    box-shadow: 0px 5px 50px #F3F5FA !important
+  .media
+    border: 0px
+    p
+      font-family: Roboto !important
+      line-height: 1.68rem !important
+      font-size: 0.87rem !important
+      letter-spacing: 0.03em !important
+      color: #8D96BD !important
+  .image
+    background: url('/img/me.png')
+    top: -30px
+    width: 62px
+    height: 62px
+
+#faq
+  hr
+    border-bottom: 1px solid #D8E3FE
+  details
+    letter-spacing: 0.03em !important
+    summary
+      font-weight: 500 !important
+      line-height: 1.18rem !important
+      font-size: 1rem !important
+      color: #8E96B7 !important
+    p
+      font-family: Roboto !important
+      line-height: 1.68rem !important
+      font-size: 0.87rem !important
+      color: #8D96BD !important
+  details[open] summary
+      font-weight: bold !important
+
+#get-started
+  background: linear-gradient(199.86deg, #6888FF 12.77%, #5E80FF 73.11%)
+  color: #FFFFFF !important
+  .content
+    max-width: 700px
+  .btn-white
+    padding: 1.1rem 1.3rem
+    box-shadow: 0px 5px 15px #6480E8 !important
+    border-radius: 2px !important
+    font-size: 0.81rem !important
+    color: #565F82 !important
+
+#newsletter
+  background: #FCFDFF
+  input
+    padding: 1.5rem 0.75rem
+    background: #EFEFF7 !important
+    border-radius: 5px !important 
+    color: #7A85AD !important
+  input::placeholder
+    color: #7A85AD !important
+    font-weight: bold !important
+    font-size: 0.8rem !important
+  .btn-sub
+    padding: 1.5rem 2rem
+    background: #4D6CE1 !important
+    box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2) !important
+    border-radius: 5px !important
+    font-weight: bold !important
+    text-align: center !important
+    color: #FFFFFF !important
+
+
+ 
 @import "~bulma"
