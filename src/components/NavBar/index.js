@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-// import styles from './layout'
+import { Link } from 'gatsby';
+import React from 'react';
+import config from '../../../meta/config.js';
+import './index.sass';
 
-import config from '../../../meta/config.js'
 
 class NavBar extends React.Component {
 
@@ -21,7 +21,7 @@ class NavBar extends React.Component {
         <div className='container'>
           <div className='navbar-brand'>
             <Link to='/' className='navbar-item logo is-unselectable is-size-5 has-text-centered'>
-              <strong><span className='logo-item'>TRU</span>GROUP</strong>
+              <img src={config.siteLogo} alt={config.siteTitle} />
             </Link>
             <Link
               to='/'
@@ -42,23 +42,23 @@ class NavBar extends React.Component {
                 Home
               </Link>
 
-              <Link className='navbar-item' to='/'>
+              <Link className='navbar-item' to='/#features'>
                 About us
               </Link>
 
-              <Link className='navbar-item' to='/pricing'>
+              <Link className='navbar-item' to='/#requirements'>
                 Requirements
               </Link>
 
-              <Link className='navbar-item' to='/about'>
+              <Link className='navbar-item' to='/#testimonials'>
                 Reviews
               </Link>
 
-              <Link className='navbar-item' to='/blog'>
+              <Link className='navbar-item' to='/#faq'>
                 FAQ
               </Link>
 
-              <Link className='navbar-item' to='/contact'>
+              <Link className='navbar-item' to='/blog'>
                 Blog
               </Link>
 

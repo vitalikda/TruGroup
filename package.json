@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-business",
-  "description": "Gatsby Business Website Starter",
+  "name": "gatsby-starter-playground",
+  "description": "Gatsby Website Starter",
   "version": "1.0.0",
-  "author": "Vaibhav Sharma",
+  "author": "vitaly.im",
   "dependencies": {
     "bulma": "^0.7.2",
     "flatpickr": "^4.5.2",
@@ -16,7 +16,7 @@
     "gatsby-plugin-offline": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
-    "gatsby-plugin-sharp": "^2.0.8",
+    "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-remark-images": "^2.0.1",
     "gatsby-source-filesystem": "^2.0.1",

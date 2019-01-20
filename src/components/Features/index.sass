@@ -1,0 +1,39 @@
+@import "../layouts/styles.sass"
+
+#features
+  $bg-color: #F5F8FF
+  $txt-color: #8D96BD
+  background-color: $bg-color
+  .icon
+    background-color: #FFF
+    border-radius: 50%
+    height: 5rem
+    width: 5rem
+  .header
+    color: #4074F8 !important
+    font-weight: 600
+  p 
+    color: $txt-color !important
+    margin-top: 0.75rem
+  .is-divider
+    max-width: 100px
+    display: block
+    position: relative
+    border-top: .1rem solid #DAE4FE
+    height: .1rem
+    margin: 2rem auto
+    text-align: center
+  .is-divider[data-content]::after
+    background: $bg-color
+    display: inline-block
+    padding: .4rem .8rem
+    -webkit-transform: translateY(-1.1rem)
+    -ms-transform: translateY(-1.1rem)
+    transform: translateY(-1.1rem)
+    font-family: Open Sans
+    font-weight: 600
+    line-height: 1.18rem
+    font-size: .68rem
+    text-align: center
+    color: $txt-color
+    content: attr(data-content)

@@ -1,29 +1,27 @@
-import React from 'react'
-import Layout from '../components/layouts'
+import { Link } from 'gatsby';
+import React from 'react';
+import Layout from '../components/layouts';
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
-      <section className='hero is-primary is-bold is-large'>
+      <section className='hero is-bold is-medium box-shadow'>
         <div className='hero-body'>
           <div className='container'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='section is-centered'>
-                  <h1 className='title'>
-                    404: NOT FOUND
-                  </h1>
-                  <h2 className='subtitle'>
-                    You just hit a route that doesn&#39;t exist... the
-                    sadness.
-                </h2>
-                </div>
-              </div>
-            </div>
+            <h1 className='title is-size-1 has-text-weight-light'>
+              <span className='has-text-weight-bold'>404:</span> not found
+            </h1>
+            <h2 className='subtitle is-size-6'>
+              You just hit a route that doesn&#39;t exist... 😅 
+            </h2>
+            <Link className='button is-primary'>
+              <span>Let's chat </span>
+              <span className='icon'>
+                <i className='fas fa-comment'></i>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
-    </div>
   </Layout>
 )
 

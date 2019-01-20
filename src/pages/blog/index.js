@@ -14,7 +14,7 @@ export default class BlogPage extends Component {
       <Layout>
         <div>
           <Helmet>
-            <title>Blog | Rug Cleaning Toronto</title>
+            <title>Blog | Tru Group</title>
           </Helmet>
           <section className='hero is-primary is-bold'>
             <div className='hero-body'>

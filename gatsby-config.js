@@ -29,13 +29,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
