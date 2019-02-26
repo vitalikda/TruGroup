@@ -5,7 +5,11 @@ const Contact = ({ address, email, phone, description }) => {
   return (
     <div
       className='content'
-      style={{ border: '1px solid #eaecee', padding: '2em 4em' }}>
+      style={{ 
+        border: '1px solid #eaecee', 
+        padding: '2em 4em',
+        maxWidth: '500px'
+      }}>
       <address>
         {address}
         <br />

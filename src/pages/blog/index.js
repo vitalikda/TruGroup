@@ -16,23 +16,10 @@ export default class BlogPage extends Component {
           <Helmet>
             <title>Blog | Tru Group</title>
           </Helmet>
-          <section className='hero is-primary is-bold'>
-            <div className='hero-body'>
-              <div className='container'>
-                <div className='columns'>
-                  <div className='column is-10 is-offset-1'>
-                    <div className='section'>
-                      <h1 className='title'>
-                        Blog
-                    </h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <section id='blog' className='section'>
+            <div className='container'>
+              <PostCard posts={posts} />
             </div>
-          </section>
-          <section className='section'>
-            <PostCard posts={posts} />
           </section>
         </div>
       </Layout>
@@ -50,7 +37,10 @@ BlogPage.propTypes = {
 
 export const blogPageQuery = graphql`
   query BlogPage {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "article-page" } } },
+    ) {
       edges {
         node {
           excerpt(pruneLength: 400)

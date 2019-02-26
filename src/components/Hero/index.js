@@ -8,13 +8,13 @@ const Hero = () => (
     <div className='hero-body'>
       <div className='container'>
         <h3 className='is-size-7 has-text-weight-semibold is-uppercase'>
-          PLAN YOUR education
+          PLAN YOUR EDUCATION
         </h3>
         <h1 className='title is-size-1 has-text-weight-light'>
           Get your <span className='has-text-weight-bold'>scholarship</span>
         </h1>
         <h2 className='subtitle is-size-6'>
-          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+          Our program can help you increase your chance of getting into university in the United States with our partnered universities, and the possibility of a scholarship for up to 50% off tuition per year. Open to any student not from the USA who has the ability to pay for remaining costs of education (after scholarship). Our services are free and we will help advocate on your behalf. Only cost to apply is the university application cost (where applicable).
         </h2>
         <Link className='button is-primary'>
           <span>Let's chat </span>

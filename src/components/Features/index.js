@@ -8,10 +8,10 @@ const Features = () => (
     <div className='container'>
       <div className='has-text-centered is-py-5 is-py-desktop-5'>
         <h3 className='is-size-7 has-text-weight-semibold is-uppercase'>
-          ABOUT US
+          COMMITTED TO YOUR SUCCESS
         </h3>
         <h1 className='title is-size-4'>
-          Read our story &#38; how we can help
+          How we can help you get accepted
         </h1>
       </div>
       <div className='columns is-centered is-variable is-8 is-py-5 is-py-desktop-5'>
@@ -19,22 +19,22 @@ const Features = () => (
           <span className='icon'>
             <img src='/icons/home.svg'/>
           </span>
-          <p className='header is-mt-5'>Overview</p>
-          <p>We are a global nonprofit organization for special admission and scholarship opportunities at American liberal arts universities for foreign students.</p>
+          <p className='header is-mt-5'>Counseling + Pre-Check</p>
+          <p>Our technology (chat feature) and advisors (nonprofit employees) assist you through finding the right university to fit your qualifications and financial needs (this is a fully free process). They will let you know what scholarships are available to you and which universities are a good fit for your career objectives and current English level.</p>
         </div>
         <div className='column is-variable is-12-mobile is-4-tablet is-3-desktop is-3-widescreen is-4-fullhd has-text-centered'>
           <span className='icon'>
             <img src='/icons/chat.svg'/>
           </span>
-          <p className='header is-mt-5'>Assistance</p>
-          <p>We offer admission assistance for international students and a free application to partner universities.</p>
+          <p className='header is-mt-5'>Application + Documents</p>
+          <p>After you have decided which university fits your financial and career needs, we will provide the application for you to fill out directly from the university (application costs depend upon university). If documents are required, you will have to send those into the university (transcripts, recommendation letters).</p>
         </div>
         <div className='column is-variable is-12-mobile is-4-tablet is-3-desktop is-3-widescreen is-4-fullhd has-text-centered'>
           <span className='icon'>
             <img src='/icons/scholar.svg'/>
           </span>
-          <p className='header is-mt-5'>Scholarship</p>
-          <p>We offer a scholarship to partner universities for an undergraduate degree and admissions assistance for undergraduate, graduate, and ESL programs.</p>
+          <p className='header is-mt-5'>Acceptance + Visa Process </p>
+          <p>After applying our staff will directly contact the university and advocate on your behalf. If accepted you will then be given an i20 visa application (which you are responsible to complete on your own).</p>
         </div>
       </div>
       <div className='columns is-centered is-vcentered is-0 is-pb-5 is-py-desktop-5'>

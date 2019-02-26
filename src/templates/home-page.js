@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import Blog from '../components/Blog';
+import PostCard from '../components/PostCard';
 import Faq from '../components/Faq';
 import Features from '../components/Features';
 import GetStarted from '../components/GetStarted';
@@ -34,7 +34,19 @@ export const HomePageTemplate = ({
       <Partners />
       <Features />
       <Requirements />
-      <Blog />
+      <section id='blog' className='section box-shadow'>
+        <div className='container'>
+          <div className='has-text-centered is-py-5 is-py-desktop-5'>
+            <h3 className='is-size-7 has-text-weight-semibold is-uppercase'>
+              OUR RESOURCES
+            </h3>
+            <h1 className='title is-size-4'>
+              Start reading our blog
+            </h1>
+          </div>
+          <PostCard />
+        </div>
+      </section>
       <Testimonials />
       <Faq />
       <GetStarted />

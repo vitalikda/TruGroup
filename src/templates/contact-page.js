@@ -18,29 +18,21 @@ export const ContactPageTemplate = ({
         <title>{meta_title}</title>
         <meta name='description' content={meta_description} />
       </Helmet>
-      <section className='hero is-primary is-bold'>
+      <section className='hero is-bold is-medium box-shadow'>
         <div className='hero-body'>
           <div className='container'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='section'>
-                  <h1 className='title'>
-                    {title}
-                  </h1>
-                  <h2 className='subtitle'>
-                    {subtitle}
-                  </h2>
-                </div>
-              </div>
+            <h1 className='title is-size-1 has-text-weight-light'>
+              <span className='has-text-weight-bold'>{title}</span>
+            </h1>
+            <h2 className='subtitle is-size-6'>
+              {subtitle}
+            </h2>
+            <div className='container'>
+              {contacts.map((contact, id) =>
+                <Contact key={id} address={contact.address} email={contact.email} phone={contact.phone} description={contact.description} />
+              )}
             </div>
           </div>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='container'>
-          {contacts.map((contact, id) =>
-            <Contact key={id} address={contact.address} email={contact.email} phone={contact.phone} description={contact.description} />
-          )}
         </div>
       </section>
     </Layout>
