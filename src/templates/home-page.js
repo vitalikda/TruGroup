@@ -24,6 +24,7 @@ export const HomePageTemplate = ({
   meta_description,
   services,
   testimonials,
+  questions,
 }) => (
     <Layout>
       <Helmet>
@@ -41,14 +42,14 @@ export const HomePageTemplate = ({
               OUR RESOURCES
             </h3>
             <h1 className='title is-size-4'>
-              Start reading our blog
+              Keep updated on upcoming programs that have scholarships such as English camps or cultural trips and learn more about our scholarships and opportunities. 
             </h1>
           </div>
           <PostCard />
         </div>
       </section>
-      <Testimonials />
-      <Faq />
+      <Testimonials testimonials={testimonials} />
+      <Faq questions={questions} />
       <GetStarted />
       <Newsletter />
       {/* <section className='section section--gradient'>
@@ -84,6 +85,7 @@ HomePageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
+  questions: PropTypes.array,
 }
 
 const HomePage = ({ data }) => {
@@ -98,6 +100,7 @@ const HomePage = ({ data }) => {
       description={frontmatter.description}
       services={data.allServices.edges[0].node.frontmatter.services}
       testimonials={data.allTestimonials.edges[0].node.frontmatter.testimonials}
+      questions={data.allQuestions.edges[0].node.frontmatter.questions}
     />
   )
 }
@@ -151,6 +154,21 @@ export const pageQuery = graphql`
             testimonials {
               author
               quote
+            }
+          }
+        }
+      }
+    }
+    allQuestions: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "faq-page" } } } 
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            questions {
+              title
+              description
             }
           }
         }

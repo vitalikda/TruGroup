@@ -13,7 +13,7 @@ const GetStarted = () => (
           Get <span className='has-text-weight-bold'>started</span> now
         </h1>
         <div className='content is-mx-auto'>
-          Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+          Please use our chat feature to get basic information to determine if you are qualified to apply for university (basic qualifications include being about to graduate, or having graduated high school, having the financial ability to pay the remaining costs of your tuition, airfare, and living expenses, and having a passport from any country other than the United States).
         </div>
         <Link className='button btn-white is-mt-3'>
           <strong>Apply Now</strong>

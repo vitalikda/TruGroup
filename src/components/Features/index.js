@@ -34,12 +34,15 @@ const Features = () => (
             <img src='/icons/scholar.svg'/>
           </span>
           <p className='header is-mt-5'>Acceptance + Visa Process </p>
-          <p>After applying our staff will directly contact the university and advocate on your behalf. If accepted you will then be given an i20 visa application (which you are responsible to complete on your own).</p>
+          <p>After applying, our staff will directly contact the university and advocate on your behalf to improve your chance of acceptance. If accepted you will then be given an i20 visa application (which you are responsible to complete on your own). We will continue to be involved even after you arrive to advocate your needs to the university.</p>
         </div>
       </div>
       <div className='columns is-centered is-vcentered is-0 is-pb-5 is-py-desktop-5'>
         <div className='column is-one-fifth has-text-centered'>
-          <Link className='button is-danger is-inverted'>
+          <Link 
+            className='button is-danger is-inverted'
+            to='/#get-started'
+          >
             Apply now
           </Link>
         </div>
@@ -47,7 +50,10 @@ const Features = () => (
           <div className='is-divider' data-content='OR'></div>
         </div>
         <div className='column is-one-fifth has-text-centered'>
-          <Link className='button is-primary is-inverted'>
+          <Link 
+            className='button is-primary is-inverted'
+            to='/blog'
+          >
             Read more
           </Link>
         </div>
