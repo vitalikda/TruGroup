@@ -1,6 +1,17 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+import Slider from 'react-slick'
+
+const settings = {
+  dots: true,
+  infinite: true,
+  // autoplay: true,
+  // speed: 500,
+  slideToShow: 1,
+  slideToScroll: 1,
+  swipeToSlide: true
+}
 
 class PostCard extends React.Component {
 
@@ -10,28 +21,27 @@ class PostCard extends React.Component {
 
     return (
       <div>
-        {posts.map(({ node: post }) => 
-          <div 
-            className='box is-my-3 carousel__slide' 
-            key={post.id}
-          >
-            <div className='columns'>
-              <div className='column has-text-centered is-m-1 is-m-tablet-5'>
-                <img src={post.frontmatter.cover} />
-              </div>
-              <div className='column is-m-1 is-m-tablet-5'>
-                <p className='header'>{post.frontmatter.title}</p>
-                <p>{post.excerpt}</p>
-                <Link
-                  className='button button-sec is-size-7 is-mt-3'
-                  to={post.fields.slug}
-                >
-                  <strong>Read now</strong>
-                </Link>
+        <Slider {...settings}>
+          {posts.map(({ node: post }) => 
+            <div className='box is-my-3' key={post.id}>
+              <div className='columns'>
+                <div className='column has-text-centered is-m-1 is-m-tablet-5'>
+                  <img src={post.frontmatter.cover} />
+                </div>
+                <div className='column is-m-1 is-m-tablet-5'>
+                  <p className='header'>{post.frontmatter.title}</p>
+                  <p>{post.excerpt}</p>
+                  <Link
+                    className='button button-sec is-size-7 is-mt-3'
+                    to={post.fields.slug}
+                  >
+                    <strong>Read now</strong>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </Slider>
       </div>
     )
   }
@@ -52,7 +62,6 @@ export default () => (
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] },
         filter: { frontmatter: { templateKey: { eq: "article-page" } } },
-        limit: 1,
       ) {
         edges {
           node {
@@ -73,7 +82,7 @@ export default () => (
     }
     `}
     render={(data, count) => (
-      <PostCard data={data} count={count} />
+      <PostCard data={data} count={count} />      
     )}
   />
 )

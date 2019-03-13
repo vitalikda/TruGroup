@@ -1,9 +1,20 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import './index.sass';
+import React from 'react'
+import PropTypes from 'prop-types'
+import './index.sass'
+import Slider from 'react-slick'
 
+const settings = {
+  arrows: false,
+  dots: true,
+  infinite: true,
+  // autoplay: true,
+  // speed: 500,
+  slideToShow: 2,
+  slideToScroll: 1,
+  swipeToSlide: true
+}
 
-const Testimonials = () => (
+const Testimonials = ({ testimonials }) => (
   <section id='testimonials' className='section box-shadow'>
     <div className='container is-my-1 is-my-tablet-5'>
       <div className='columns is-mx-1 is-mx-tablet-5'>
@@ -12,45 +23,40 @@ const Testimonials = () => (
             TESTIMONIALS
           </h3>
           <h1 className='title is-size-4'>
-            Students' quotes
+            Tru Supporters
           </h1>
-          <p>Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
+          <p>We are always looking for students looking to study and acquire a scholarship through our program, and also to partner with High Schools to assist students to gain a great education that will help them create a successful career.</p>
         </div>
-        <div className='column is-mx-3'>
-          <div className='box is-marginless is-my-3'>
-            <div className='media'>
-              <div className='media-content'>
-                <div className='content is-my-4 is-mx-2 is-mx-desktop-5'>
-                  <p>Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+        <div className='column is-half is-mx-3'>
+          <Slider {...settings}>
+            {testimonials.map((testimonial, id) => (
+              <div key={id}>
+                <div className='box is-marginless is-my-3'>
+                  <div className='media'>
+                    <div className='media-content'>
+                      <div className='content is-my-4 is-mx-2 is-mx-desktop-5'>
+                        <p>{testimonial.quote}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <span className='image is-rounded is-mx-auto' />
               </div>
-            </div>
-          </div>
-          <span className='image is-rounded is-mx-auto'/>
-          <div className='has-text-centered'>
-            <Link className='icon carousel-dot'>
-              <i className='fas fa-circle fa-sm'></i> 
-            </Link>
-            <Link className='icon carousel-dot active'>
-              <i className='fas fa-circle fa-sm'></i> 
-            </Link>
-            <Link className='icon carousel-dot'>
-              <i className='fas fa-circle fa-sm'></i> 
-            </Link>
-            <Link className='icon carousel-dot'>
-              <i className='fas fa-circle fa-sm'></i> 
-            </Link>
-            <Link className='icon carousel-dot'>
-              <i className='fas fa-circle fa-sm'></i> 
-            </Link>
-            <Link className='icon carousel-dot'>
-              <i className='fas fa-circle fa-sm'></i> 
-            </Link>
-          </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>
   </section>
 )
+
+Testimonials.propTypes = {
+  testimonials: PropTypes.arrayOf(
+    PropTypes.shape({
+      quote: PropTypes.string,
+      author: PropTypes.string,
+    })
+  ),
+}
 
 export default Testimonials
