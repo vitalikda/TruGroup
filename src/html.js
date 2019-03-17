@@ -43,6 +43,7 @@ export default class HTML extends Component {
           />
           {this.props.postBodyComponents}
           {/* <script src={__PATH_PREFIX__ + '/js/toggle.js'} /> */}
+          <script type="text/javascript" src="https://quriobot.com/qb/widget/qbtests3/3MY12wr84drd8ARO"></script>
         </body>
       </html>
     )

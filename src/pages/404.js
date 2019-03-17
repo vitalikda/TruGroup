@@ -11,9 +11,14 @@ const NotFoundPage = () => (
             <span className='has-text-weight-bold'>404:</span> not found
           </h1>
           <h2 className='subtitle is-size-6'>
-            You just hit a route that doesn&#39;t exist... 😅 
+            You just hit a route that doesn&#39;t exist... 😅
           </h2>
-          <Link className='button is-primary'>
+          <Link
+            to='#'
+            className='button is-primary'
+            id='go'
+            onclick='quriobot.start()'
+          >
             <span>Let's chat </span>
             <span className='icon'>
               <i className='fas fa-comment'></i>

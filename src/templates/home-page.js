@@ -22,6 +22,8 @@ export const HomePageTemplate = ({
   description,
   meta_title,
   meta_description,
+  partners,
+  requirements,
   services,
   testimonials,
   questions,
@@ -32,9 +34,9 @@ export const HomePageTemplate = ({
         <meta name='description' content={meta_description} />
       </Helmet>
       <Hero />
-      <Partners />
+      <Partners partners={partners} />
       <Features />
-      <Requirements />
+      <Requirements requirements={requirements} />
       <section id='blog' className='section box-shadow'>
         <div className='container'>
           <div className='has-text-centered is-py-5 is-py-desktop-5'>
@@ -81,6 +83,8 @@ HomePageTemplate.propTypes = {
   meta_description: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
+  partners: PropTypes.array,
+  requirements: PropTypes.array,
   services: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -98,9 +102,11 @@ const HomePage = ({ data }) => {
       meta_description={frontmatter.meta_description}
       heading={frontmatter.heading}
       description={frontmatter.description}
+      partners={frontmatter.partners}
+      requirements={frontmatter.requirements}
       services={data.allServices.edges[0].node.frontmatter.services}
       testimonials={data.allTestimonials.edges[0].node.frontmatter.testimonials}
-      questions={data.allQuestions.edges[0].node.frontmatter.questions}
+      questions={frontmatter.questions}
     />
   )
 }
@@ -124,6 +130,15 @@ export const pageQuery = graphql`
         meta_description
         heading
         description
+        partners
+        requirements {
+          positive
+          negative
+        }
+        questions {
+          title
+          description
+        }
       }
     }
     allServices: allMarkdownRemark(
