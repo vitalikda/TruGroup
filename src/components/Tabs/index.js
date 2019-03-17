@@ -17,7 +17,7 @@ const Tabs = () => (
         </li>
         <li>
           <Link 
-            to='/contact/' 
+            to='/about/' 
             activeClassName='is-active'
           >
           Corporate

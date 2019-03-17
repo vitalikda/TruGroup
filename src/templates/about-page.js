@@ -14,16 +14,14 @@ export const AboutPageTemplate = ({
 
   return (
     <Layout>
-      <section className='hero is-primary is-bold'>
+      <section className='hero is-primary is-bold box-shadow'>
         <div className='hero-body'>
           <div className='container'>
             <div className='columns'>
               <div className='column is-10 is-offset-1'>
-                <div className='section'>
-                  <h1 className='title'>
-                    {title}
-                  </h1>
-                </div>
+                <h1 className='title has-text-white'>
+                  {title}
+                </h1>
               </div>
             </div>
           </div>
@@ -33,9 +31,7 @@ export const AboutPageTemplate = ({
         <div className='container'>
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <PageContent className='content' content={content} />
-              </div>
+              <PageContent className='content' content={content} />
             </div>
           </div>
         </div>
