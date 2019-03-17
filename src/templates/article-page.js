@@ -42,13 +42,16 @@ export const ArticleTemplate = ({
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
                   <h4>Tags</h4>
-                  <ul className='taglist'>
+                  <div className='tags are-small'>
                     {tags.map(tag => (
-                      <li key={tag + `tag`}>
+                      <span 
+                        className='tag'
+                        key={tag + `tag`}
+                      >
                         <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ) : null}
               <hr />

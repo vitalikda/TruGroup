@@ -5,8 +5,8 @@ slug: lorem-ipsum-dolor-situm
 date: 2016-05-09T03:55:00.000Z
 cover: /img/58d10ca605004dc5a700dd497e106075.jpg
 tags:
-  - lorem
-  - ipsum
+  - Lorem
+  - Ipsum
 meta_title: Lorem Ipsum Dolor Situm
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
