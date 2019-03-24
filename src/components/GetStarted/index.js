@@ -15,9 +15,14 @@ const GetStarted = () => (
         <div className='content is-mx-auto'>
           Please use our chat feature to get basic information to determine if you are qualified to apply for university (basic qualifications include being about to graduate, or having graduated high school, having the financial ability to pay the remaining costs of your tuition, airfare, and living expenses, and having a passport from any country other than the United States).
         </div>
-        <Link className='button btn-white is-mt-3'>
+        <a
+          className='button btn-white is-mt-3'
+          href='#'
+          id='go'
+          onclick='quriobot.start()'
+        >
           <strong>Apply Now</strong>
-        </Link>
+        </a>
       </div>
     </div>
   </section>

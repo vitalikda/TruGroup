@@ -13,9 +13,9 @@ const NotFoundPage = () => (
           <h2 className='subtitle is-size-6'>
             You just hit a route that doesn&#39;t exist... 😅
           </h2>
-          <Link
-            to='#'
+          <a
             className='button is-primary'
+            href='#'
             id='go'
             onclick='quriobot.start()'
           >
@@ -23,7 +23,7 @@ const NotFoundPage = () => (
             <span className='icon'>
               <i className='fas fa-comment'></i>
             </span>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

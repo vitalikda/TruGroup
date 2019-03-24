@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import PostCard from '../../components/PostCard'
@@ -18,7 +18,25 @@ export default class BlogPage extends Component {
           </Helmet>
           <section id='blog' className='section'>
             <div className='container'>
-              <PostCard posts={posts} />
+              {posts.map(({ node: post }) =>
+                <div className='box is-my-3 is-mb-5' key={post.id}>
+                  <div className='columns'>
+                    <div className='column has-text-centered is-m-1 is-m-tablet-5'>
+                      <img src={post.frontmatter.cover} />
+                    </div>
+                    <div className='column is-m-1 is-m-tablet-5'>
+                      <p className='header'>{post.frontmatter.title}</p>
+                      <p>{post.excerpt}</p>
+                      <Link
+                        className='button button-sec is-size-7 is-mt-3'
+                        to={post.fields.slug}
+                      >
+                        <strong>Read now</strong>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </section>
         </div>

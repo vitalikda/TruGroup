@@ -23,8 +23,8 @@ class NavBar extends React.Component {
             <Link to='/' className='navbar-item logo is-unselectable is-size-5 has-text-centered'>
               <img src={config.siteLogo} alt={config.siteTitle} />
             </Link>
-            <Link
-              to='/'
+            <a
+              href='#'
               className={`navbar-burger burger ${menuVis}`}
               aria-label='menu'
               aria-expanded='false'
@@ -33,7 +33,7 @@ class NavBar extends React.Component {
               <span />
               <span />
               <span />
-            </Link>
+            </a>
           </div>
 
           <div className={`navbar-menu ${menuVis}`}>
@@ -63,9 +63,14 @@ class NavBar extends React.Component {
               </Link>
 
               <div className='navbar-item'>
-                <Link className='button button-sec is-size-7'>
+                <a
+                  className='button button-sec is-size-7'
+                  href='#'
+                  id='go'
+                  onclick='quriobot.start()'
+                >
                   <strong>Apply Now</strong>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

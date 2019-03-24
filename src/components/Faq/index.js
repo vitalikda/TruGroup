@@ -14,9 +14,8 @@ const Faq = ({ questions }) => (
           Frequently asked questions
         </h1>
       </div>
-      <div className='columns is-multiline is-centered is-my-3'>
-        <div className='column is-one-fifth'></div>
-        <div className='column is-mx-3 is-mx-desktop-0'>
+      <div className='columns is-centered is-my-3'>
+        <div className='column is-8 is-mx-3'>
           {questions.map((questions, id) => (
             <div key={id}>
               <details>
@@ -27,7 +26,6 @@ const Faq = ({ questions }) => (
             </div>
           ))}
         </div>
-        <div className='column is-one-fifth'></div>
       </div>
     </div>
   </section>

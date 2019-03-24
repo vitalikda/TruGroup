@@ -21,30 +21,35 @@ const Footer = () => {
               Home
             </Link>
 
-            <Link className='level-item' to='/'>
+            <Link className='level-item' to='/#features'>
               About us
             </Link>
 
-            <Link className='level-item' to='/'>
+            <Link className='level-item' to='/#requirements'>
               Requirements
             </Link>
 
-            <Link className='level-item' to='/'>
+            <Link className='level-item' to='/#testimonials'>
               Reviews
             </Link>
 
-            <Link className='level-item' to='/'>
+            <Link className='level-item' to='/#faq'>
               FAQ
             </Link>
 
-            <Link className='level-item' to='/'>
+            <Link className='level-item' to='/blog'>
               Blog
             </Link>
 
             <div className='level-item'>
-              <Link className='button button-sec is-size-7'>
+              <a
+                className='button button-sec is-size-7'
+                href='#'
+                id='go'
+                onclick='quriobot.start()'
+              >
                 <strong>Apply Now</strong>
-              </Link>
+              </a>
             </div>
 
           </div>
@@ -54,7 +59,7 @@ const Footer = () => {
             <p>{config.copyright} <span>Coded by <a className='has-text-grey-lighter' href='https://vitaly.im' target='_blank'>Vitaly <i className='far fa-hand-peace'></i></a></span></p>
           </div>
           <div className='level-item'>
-            
+
           </div>
         </div>
       </div>
