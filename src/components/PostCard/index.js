@@ -3,6 +3,28 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={'slick-arrow fas fa-arrow-right'}
+      style={{ ...style, display: "block", color: "#A8B4E5", fontFamily: "Font Awesome 5 Free", fontSize: "1.5rem", position: "absolute", top: "50%", right: "-50px" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={'slick-arrow fas fa-arrow-left'}
+      style={{ ...style, display: "block", color: "#A8B4E5", fontFamily: "Font Awesome 5 Free", fontSize: "1.5rem", position: "absolute", top: "50%", left: "-50px" }}
+      onClick={onClick}
+    />
+  );
+}
+
 const settings = {
   dots: true,
   infinite: true,
@@ -10,7 +32,9 @@ const settings = {
   // speed: 500,
   slideToShow: 1,
   slideToScroll: 1,
-  swipeToSlide: true
+  swipeToSlide: true,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />
 }
 
 class PostCard extends React.Component {

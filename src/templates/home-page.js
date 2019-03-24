@@ -47,7 +47,11 @@ export const HomePageTemplate = ({
               Keep updated on upcoming programs that have scholarships such as English camps or cultural trips and learn more about our scholarships and opportunities. 
             </h1>
           </div>
-          <PostCard />
+          <div className='columns is-centered'>
+            <div className='column is-10'>
+              <PostCard />
+            </div>
+          </div>
         </div>
       </section>
       <Testimonials testimonials={testimonials} />
