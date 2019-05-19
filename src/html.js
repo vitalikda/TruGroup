@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 // import favicon from '../static/icons/favicon.ico'
 
 let inlinedStyles = ''
@@ -13,13 +13,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 export default class HTML extends Component {
-  render () {
+  render() {
     let css
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id='gatsby-inlined-css'
-          dangerouslySetInnerHTML={{__html: inlinedStyles}}
+          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
         />
       )
     }
@@ -34,15 +34,26 @@ export default class HTML extends Component {
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="manifest" href="/icons/site.webmanifest"></link>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           {css}
         </head>
         <body>
           <div
             id='___gatsby'
-            dangerouslySetInnerHTML={{__html: this.props.body}}
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          {/* <script src={__PATH_PREFIX__ + '/js/toggle.js'} /> */}
+          <script>
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              })
+            }
+          </script>
         </body>
       </html>
     )
