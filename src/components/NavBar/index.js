@@ -58,16 +58,15 @@ class NavBar extends React.Component {
                 FAQ
               </Link>
 
-              <Link className='navbar-item' to='/blog'>
-                Blog
+              <Link className='navbar-item' to='/resources'>
+                Resources
               </Link>
 
               <div className='navbar-item'>
                 <a
                   className='button button-sec is-size-7'
-                  href='#'
-                  id='go'
-                  onclick='quriobot.start()'
+                  href='https://bit.ly/2WM0Enb'
+                  target='_blank'
                 >
                   <strong>Apply Now</strong>
                 </a>

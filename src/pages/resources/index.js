@@ -14,7 +14,7 @@ export default class BlogPage extends Component {
       <Layout>
         <div>
           <Helmet>
-            <title>Blog | Tru Group</title>
+            <title>Resources | Tru Group</title>
           </Helmet>
           <section id='blog' className='section'>
             <div className='container'>

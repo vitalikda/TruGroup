@@ -3,7 +3,7 @@ templateKey: article-page
 title: This is your second post
 slug: Lorem-Ipsum-123
 date: 2016-05-10T13:22:00.000Z
-cover: /img/179fef22037d45a3ac69ade4936dcb75.jpg
+cover: /img/blog-img3.png
 tags:
   - Lorem
   - Ipsum

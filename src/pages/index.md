@@ -11,8 +11,8 @@ heading: Scholarships in US universities
 description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam   venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis   consectetur purus sit amet fermentum.
 partners:
+  - /img/uni-gannon.png
   - /img/uni-cwu.png
-  - /img/uni-gannon.jpg
   - /img/uni-redlands.png
 requirements:
   positive:

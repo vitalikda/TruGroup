@@ -3,7 +3,7 @@ templateKey: article-page
 title: This is your first post
 slug: lorem-ipsum-dolor-situm
 date: 2016-05-09T03:55:00.000Z
-cover: /img/58d10ca605004dc5a700dd497e106075.jpg
+cover: /img/blog-img2.png
 tags:
   - Lorem
   - Ipsum

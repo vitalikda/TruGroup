@@ -37,16 +37,15 @@ const Footer = () => {
               FAQ
             </Link>
 
-            <Link className='level-item' to='/blog'>
-              Blog
+            <Link className='level-item' to='/resources'>
+              Resources
             </Link>
 
             <div className='level-item'>
               <a
                 className='button button-sec is-size-7'
-                href='#'
-                id='go'
-                onclick='quriobot.start()'
+                href='https://bit.ly/2WM0Enb'
+                target='_blank'
               >
                 <strong>Apply Now</strong>
               </a>

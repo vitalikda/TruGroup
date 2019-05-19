@@ -20,7 +20,7 @@ const Hero = () => (
           className='button is-primary'
           href='#'
           id='go'
-          onclick='quriobot.start()'
+          onClick='quriobot.start()'
         >
           <span>Let's chat </span>
           <span className='icon'>

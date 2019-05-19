@@ -30,7 +30,7 @@ const Testimonials = ({ testimonials }) => (
         <div className='column is-half is-mx-3'>
           <Slider {...settings}>
             {testimonials.map((testimonial, id) => (
-              <div key={id}>
+              <div className='container is-px-1' key={id}>
                 <div className='box is-marginless is-my-3'>
                   <div className='media'>
                     <div className='media-content'>

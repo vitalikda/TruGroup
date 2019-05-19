@@ -2,21 +2,18 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/layouts'
 
 export const JoePageTemplate = ({
   title,
-  meta_title,
-  meta_description,
-  description,
-  milestones,
-  links,
-}) => (
+  content,
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content
+
+  return (
     <Layout>
-      <Helmet>
-        <title>{meta_title}</title>
-        <meta name='description' content={meta_description} />
-      </Helmet>
       <section className='hero is-primary is-bold box-shadow'>
         <div className='hero-body'>
           <div className='container'>
@@ -34,70 +31,41 @@ export const JoePageTemplate = ({
         <div className='container'>
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <p style={{ whiteSpace: 'pre-line' }} >
-                  {description}
-                </p>
-                {milestones.map((milestone, id) => (
-                  <div key={id}>
-                    <p className='has-text-weight-semibold is-size-4'>{milestone.description}</p>
-                    <ul>
-                      {milestone.items.map((item, id) => (
-                        <li key={id}>{item}</li>
-                      ))}
-                    </ul>
-                    <br />
-                  </div>
-                ))}
-                {links.map((link, id) => (
-                  <div key={id}>
-                    <a href={link.url}>{link.description}</a>
-                  </div>
-                ))}
-              </div>
+              <PageContent className='content' content={content} />
             </div>
           </div>
         </div>
       </section>
     </Layout>
   )
+} 
 
 JoePageTemplate.propTypes = {
-  title: PropTypes.string,
-  meta_title: PropTypes.string,
-  meta_description: PropTypes.string,
-  description: PropTypes.string,
-  milestones: PropTypes.shape({
-    description: PropTypes.string,
-    items: PropTypes.array,
-  }),
-  links: PropTypes.shape({
-    description: PropTypes.string,
-    url: PropTypes.string,
-  }),
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 const JoePage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { markdownRemark: post } = data
 
   return (
-    <JoePageTemplate
-      title={frontmatter.title}
-      meta_title={frontmatter.meta_title}
-      meta_description={frontmatter.meta_description}
-      description={frontmatter.description}
-      milestones={frontmatter.milestones}
-      links={frontmatter.links}
-    />
+    <div>
+      <Helmet>
+        <title>{post.frontmatter.meta_title}</title>
+        <meta name='description' content={post.frontmatter.meta_description} />
+      </Helmet>
+      <JoePageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        content={post.html}
+      />
+    </div>
   )
 }
 
 JoePage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+  data: PropTypes.object.isRequired,
 }
 
 export default JoePage
@@ -105,19 +73,11 @@ export default JoePage
 export const joePageQuery = graphql`
   query JoePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         meta_title
         meta_description
-        description
-        milestones {
-          description
-          items
-        }
-        links {
-          description
-          url
-        }
       }
     }
   }

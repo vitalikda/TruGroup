@@ -6,6 +6,18 @@ import './index.sass'
 const Features = () => (
   <section id='features' className='section box-shadow'>
     <div className='container'>
+      <img 
+        src='/icons/clouds-1.svg'
+        className='clouds-top-left'
+      />
+      <img 
+        src='/icons/clouds-2.svg'
+        className='clouds-bottom-left'
+      />
+      <img 
+        src='/icons/clouds-3.svg'
+        className='clouds-top-right'
+      />
       <div className='has-text-centered is-py-5 is-py-desktop-5'>
         <h3 className='is-size-7 has-text-weight-semibold is-uppercase'>
           COMMITTED TO YOUR SUCCESS
@@ -39,12 +51,13 @@ const Features = () => (
       </div>
       <div className='columns is-centered is-vcentered is-0 is-pb-5 is-py-desktop-5'>
         <div className='column is-one-fifth has-text-centered'>
-          <Link 
+          <a 
             className='button is-danger is-inverted'
-            to='/#get-started'
+            href='https://bit.ly/2WM0Enb'
+            target='_blank'
           >
             Apply now
-          </Link>
+          </a>
         </div>
         <div className='column is-one-fifth has-text-centered'>
           <div className='is-divider' data-content='OR'></div>
@@ -52,7 +65,7 @@ const Features = () => (
         <div className='column is-one-fifth has-text-centered'>
           <Link 
             className='button is-primary is-inverted'
-            to='/blog'
+            to='/resources'
           >
             Read more
           </Link>

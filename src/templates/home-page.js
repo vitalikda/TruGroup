@@ -13,7 +13,6 @@ import Partners from '../components/Partners';
 import Requirements from '../components/Requirements';
 import Testimonials from '../components/Testimonials';
 
-// import Services from './services-page'
 // import TestimonialsPage from './testimonials-page'
 
 export const HomePageTemplate = ({
@@ -24,7 +23,6 @@ export const HomePageTemplate = ({
   meta_description,
   partners,
   requirements,
-  services,
   testimonials,
   questions,
 }) => (
@@ -38,7 +36,7 @@ export const HomePageTemplate = ({
       <Features />
       <Requirements requirements={requirements} />
       <section id='blog' className='section box-shadow'>
-        <div className='container'>
+        <div className='container is-mb-5'>
           <div className='has-text-centered is-py-5 is-py-desktop-5'>
             <h3 className='is-size-7 has-text-weight-semibold is-uppercase'>
               OUR RESOURCES
@@ -58,26 +56,6 @@ export const HomePageTemplate = ({
       <Faq questions={questions} />
       <GetStarted />
       <Newsletter />
-      {/* <section className='section section--gradient'>
-        <div className='container'>
-          <div className='section'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='content'>
-                  <div>
-                    <h3 className='has-text-weight-semibold is-size-2'>
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                  <Services gridItems={services.blurbs} />
-                  <Testimonials testimonials={testimonials} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </Layout>
   )
 
@@ -89,9 +67,6 @@ HomePageTemplate.propTypes = {
   description: PropTypes.string,
   partners: PropTypes.array,
   requirements: PropTypes.array,
-  services: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
   testimonials: PropTypes.array,
   questions: PropTypes.array,
 }
@@ -108,7 +83,6 @@ const HomePage = ({ data }) => {
       description={frontmatter.description}
       partners={frontmatter.partners}
       requirements={frontmatter.requirements}
-      services={data.allServices.edges[0].node.frontmatter.services}
       testimonials={data.allTestimonials.edges[0].node.frontmatter.testimonials}
       questions={frontmatter.questions}
     />
@@ -142,24 +116,6 @@ export const pageQuery = graphql`
         questions {
           title
           description
-        }
-      }
-    }
-    allServices: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "services-page" } } } 
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            services {
-              blurbs {
-                image
-                title
-                text
-              }
-            }
-          }
         }
       }
     }

@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Tru Group', // Site title.
   siteTitleAlt: 'Scholarships in US universities.', // Alternative site title for SEO.
-  siteLogo: '/icons/logo.svg', // Logo used for SEO and manifest.
+  siteLogo: '/img/tru_group.png', // Logo used for SEO and manifest.
   siteUrl: 'http://tru.co.education', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
   siteDescription: 'Scholarships in US universities.', // Website description used for RSS feeds/meta description tag.

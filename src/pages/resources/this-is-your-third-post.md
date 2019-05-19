@@ -3,7 +3,7 @@ templateKey: article-page
 title: Scholarship Process
 slug: scholarship-process
 date: 2019-01-01T12:00:00.000Z
-cover: /img/20e5671799c242d8b8faf5edc41c7311.jpg
+cover: /img/blog-img4.png
 tags:
   - Scholarship
   - Process

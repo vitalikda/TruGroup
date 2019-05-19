@@ -9,7 +9,7 @@ const Newsletter = () => (
           <h2 className='title is-size-6'>
             Join our not frequent newsletter
           </h2>
-          <p>Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</p>
+          <p>Keep up to date on our latest scholarships, programs, and opportunities.</p>
         </div>
         <div className='column is-mx-3'>
           <div className='field is-grouped'>

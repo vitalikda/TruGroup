@@ -7,8 +7,8 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={'slick-arrow fas fa-arrow-right'}
-      style={{ ...style, display: "block", color: "#A8B4E5", fontFamily: "Font Awesome 5 Free", fontSize: "1.5rem", position: "absolute", top: "50%", right: "-50px" }}
+      className={'slick-arrow fas fa-arrow-right is-hidden-mobile'}
+      style={{ ...style, display: "block", color: "#A8B4E5", fontFamily: "Font Awesome 5 Free", fontSize: "1.5rem", position: "absolute", top: "50%", right: "-40px" }}
       onClick={onClick}
     />
   );
@@ -18,8 +18,8 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={'slick-arrow fas fa-arrow-left'}
-      style={{ ...style, display: "block", color: "#A8B4E5", fontFamily: "Font Awesome 5 Free", fontSize: "1.5rem", position: "absolute", top: "50%", left: "-50px" }}
+      className={'slick-arrow fas fa-arrow-left is-hidden-mobile'}
+      style={{ ...style, display: "block", color: "#A8B4E5", fontFamily: "Font Awesome 5 Free", fontSize: "1.5rem", position: "absolute", top: "50%", left: "-40px" }}
       onClick={onClick}
     />
   );
@@ -46,21 +46,23 @@ class PostCard extends React.Component {
     return (
       <div>
         <Slider {...settings}>
-          {posts.map(({ node: post }) => 
-            <div className='box is-my-3' key={post.id}>
-              <div className='columns'>
-                <div className='column has-text-centered is-m-1 is-m-tablet-5'>
-                  <img src={post.frontmatter.cover} />
-                </div>
-                <div className='column is-m-1 is-m-tablet-5'>
-                  <p className='header'>{post.frontmatter.title}</p>
-                  <p>{post.excerpt}</p>
-                  <Link
-                    className='button button-sec is-size-7 is-mt-3'
-                    to={post.fields.slug}
-                  >
-                    <strong>Read now</strong>
-                  </Link>
+          {posts.map(({ node: post }) =>
+            <div className='container is-px-1' key={post.id}>
+              <div className='box is-my-2'>
+                <div className='columns'>
+                  <div className='column has-text-centered is-my-3 is-mx-2 is-mx-tablet-2'>
+                    <img src={post.frontmatter.cover} />
+                  </div>
+                  <div className='column is-my-3 is-mx-2 is-mx-tablet-2'>
+                    <p className='header'>{post.frontmatter.title}</p>
+                    <p>{post.excerpt}</p>
+                    <Link
+                      className='button button-sec is-size-7 is-mt-3'
+                      to={post.fields.slug}
+                    >
+                      <strong>Read now</strong>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,7 +108,7 @@ export default () => (
     }
     `}
     render={(data, count) => (
-      <PostCard data={data} count={count} />      
+      <PostCard data={data} count={count} />
     )}
   />
 )
