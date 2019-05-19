@@ -2,7 +2,7 @@
 templateKey: article-page
 title: Helpful Resources
 slug: helpful-resources
-date: 2019-02-01T12:00:00.000Z
+date: 2019-02-24T12:00:00.000Z
 cover: /img/blog-img1.png
 tags:
   - Tru Social Responsibility
