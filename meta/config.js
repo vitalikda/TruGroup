@@ -12,8 +12,9 @@ module.exports = {
   userName: 'Tru Group',
   userTwitter: '',
   userLocation: 'USA',
-  userDescription: 'A collection of independently branded companies and social enterprises around the world with a unified goal to positively impact industry and society.',
-  copyright: 'Copyright © Tru Group USA 2018. All Rights Reserved.', // Copyright string for the footer of the website and RSS feed.
+  userDescription:
+    'A collection of independently branded companies and social enterprises around the world with a unified goal to positively impact industry and society.',
+  copyright: 'Tru Group USA. All Rights Reserved.', // Copyright string for the footer of the website and RSS feed.
   themeColor: '#5E81FE;', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#F5F8FF', // Used for setting manifest background color.
-}
+  backgroundColor: '#F5F8FF' // Used for setting manifest background color.
+};

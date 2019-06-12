@@ -3,6 +3,8 @@ import React from 'react';
 import config from '../../../meta/config';
 import './index.sass';
 
+const currentYear = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <footer id='fotter' className='section'>
@@ -10,13 +12,15 @@ const Footer = () => {
         <div className='level is-my-5'>
           <div className='level-left'>
             <div className='level-item'>
-              <Link to='/' className='logo is-unselectable is-size-5 has-text-centered'>
+              <Link
+                to='/'
+                className='logo is-unselectable is-size-5 has-text-centered'
+              >
                 <img src={config.siteLogo} alt={config.siteTitle} />
               </Link>
             </div>
           </div>
           <div className='level-right'>
-
             <Link className='level-item' to='/'>
               Home
             </Link>
@@ -50,20 +54,26 @@ const Footer = () => {
                 <strong>Apply Now</strong>
               </a>
             </div>
-
           </div>
         </div>
-        <div className='level is-my-5'>
-          <div className='level-left has-text-grey-lighter'>
-            <p>{config.copyright} <span>Coded by <a className='has-text-grey-lighter' href='https://vitaly.im' target='_blank'>Vitaly <i className='far fa-hand-peace'></i></a></span></p>
-          </div>
-          <div className='level-item'>
-
-          </div>
+        <div className='is-my-5 has-text-centered'>
+          <p>
+            Copyright &copy; {currentYear} {config.copyright}
+          </p>
+          <p className='is-my-3 has-text-grey-lighter'>
+            Coded by{' '}
+            <a
+              className='has-text-grey-lighter'
+              href='https://vitaly.im'
+              target='_blank'
+            >
+              Vitaly <i className='far fa-hand-peace' />
+            </a>
+          </p>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
