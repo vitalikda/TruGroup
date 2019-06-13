@@ -1,17 +1,20 @@
 ---
 templateKey: article-page
-title: This is your second post
+title: New scholarship for Masters Degree
 slug: Lorem-Ipsum-123
 date: 2016-05-10T13:22:00.000Z
 cover: /img/blog-img3.png
 tags:
-  - Lorem
-  - Ipsum
-  - test
-meta_title: Lorem Ipsum
-meta_description: Lorem Ipsum is Lorem Ipsum.
+  - new program
+  - scholarship
+  - masters degree
+meta_title: New Masters Degree for Gannon University
+meta_description: >-
+  New Masters Degree in Public Administration with a reduced cost at Gannon
+  University
 ---
-This is your blog post. Blogs are a great way to connect with your audience and keep them coming back. They can also be a great way to position yourself as an authority in your field. To edit your content, simply click here to open the Blog Manager. From the Blog Manager you can edit posts and also add a brand new post in a breeze.
+Special Program: Master of Public Administration at Gannon University 
 
+Tuition reduced to $650 per credit or $11,700 USD per academic year.   This is an amazing commitment for graduate-level education and for the person who is desirous of this program.  You can contact us to apply for free. 
 
-Great looking images make your blog posts more visually compelling for your audience, so choose images that really wow. Adding fun and compelling videos is another great way to engage your audience and keep them coming back for more. And to organize your posts according to subject-matter, define a ‘Category’ for each post in the Blog Manager.
+You can find the program on GU’s Web site: http://www.gannon.edu/Academic-Offerings/Engineering-and-Business/Graduate/Public-Administration/Program-Outcomes/
