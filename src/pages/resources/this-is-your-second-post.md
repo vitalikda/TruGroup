@@ -1,8 +1,8 @@
 ---
 templateKey: article-page
 title: New scholarship for Masters Degree
-slug: Lorem-Ipsum-123
-date: 2016-05-10T13:22:00.000Z
+slug: masters-scholarship
+date: 2019-05-31T13:22:00.000Z
 cover: /img/blog-img3.png
 tags:
   - new program
