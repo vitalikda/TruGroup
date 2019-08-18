@@ -19,6 +19,9 @@ const Footer = () => {
                 <img src={config.siteLogo} alt={config.siteTitle} />
               </Link>
             </div>
+            <div className='level-item'>
+              <span class='is-size-7 has-text-weight-light'>sapio academy</span>
+            </div>
           </div>
           <div className='level-right'>
             <Link className='level-item' to='/'>

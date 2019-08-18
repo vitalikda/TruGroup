@@ -8,16 +8,16 @@ meta_description: >-
   venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
   consectetur purus sit amet fermentum.
 testimonials:
+  - author: Muhammad Ahmed
+    quote: >-
+      “Tru Group's help made it so I could attend university in USA with the best price. I am grateful that I didn't have to use an expensive agent who didn't understand what I needed.”
   - author: Jessie Brown
     quote: >-
-      “Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam.” 
+      “Cras mattis   consectetur purus sit amet fermentum.”
   - author: Jessie Brown
     quote: >-
-      “Cras mattis   consectetur purus sit amet fermentum.” 
+      “Cras mattis   consectetur purus sit amet fermentum.”
   - author: Jessie Brown
     quote: >-
-      “Cras mattis   consectetur purus sit amet fermentum.” 
-  - author: Jessie Brown
-    quote: >-
-      “Cras mattis   consectetur purus sit amet fermentum.” 
+      “Cras mattis   consectetur purus sit amet fermentum.”
 ---

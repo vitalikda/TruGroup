@@ -3,25 +3,33 @@ import React from 'react';
 import config from '../../../meta/config.js';
 import './index.sass';
 
-
 class NavBar extends React.Component {
-
   // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-  state = { showMenu: false }
+  state = { showMenu: false };
   toggleMenu = () => {
     this.setState({
       showMenu: !this.state.showMenu
-    })
-  }
+    });
+  };
 
   render() {
     const menuVis = this.state.showMenu ? 'is-active' : '';
     return (
-      <nav className='navbar has-shadow is-transparent' aria-label='main navigation'>
+      <nav
+        className='navbar has-shadow is-transparent'
+        aria-label='main navigation'
+      >
         <div className='container'>
           <div className='navbar-brand'>
-            <Link to='/' className='navbar-item logo is-unselectable is-size-5 has-text-centered'>
+            <Link
+              to='/'
+              className='navbar-item logo is-unselectable is-size-5 has-text-centered'
+            >
               <img src={config.siteLogo} alt={config.siteTitle} />
+              <span class='navbar-brand-text is-size-7 has-text-weight-light has-text-left'>
+                sapio <br />
+                academy
+              </span>
             </Link>
             <a
               href='#'
@@ -73,11 +81,10 @@ class NavBar extends React.Component {
               </div>
             </div>
           </div>
-
         </div>
       </nav>
-    )
+    );
   }
 }
 
-export default NavBar
+export default NavBar;
