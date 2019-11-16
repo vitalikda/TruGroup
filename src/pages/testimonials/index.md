@@ -11,13 +11,4 @@ testimonials:
   - author: Muhammad Ahmed
     quote: >-
       “Tru Group's help made it so I could attend university in USA with the best price. I am grateful that I didn't have to use an expensive agent who didn't understand what I needed.”
-  - author: Jessie Brown
-    quote: >-
-      “Cras mattis   consectetur purus sit amet fermentum.”
-  - author: Jessie Brown
-    quote: >-
-      “Cras mattis   consectetur purus sit amet fermentum.”
-  - author: Jessie Brown
-    quote: >-
-      “Cras mattis   consectetur purus sit amet fermentum.”
 ---
