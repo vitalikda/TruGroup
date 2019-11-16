@@ -1,24 +1,24 @@
-import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import PostCard from '../../components/PostCard'
-import Layout from '../../components/layouts'
+import React, { Component } from 'react';
+import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import PostCard from '../../components/PostCard';
+import Layout from '../../components/layouts';
 
 export default class BlogPage extends Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <Layout>
         <div>
           <Helmet>
-            <title>Resources | Tru Group</title>
+            <title>Tru | Edu Resources</title>
           </Helmet>
           <section id='blog' className='section'>
             <div className='container'>
-              {posts.map(({ node: post }) =>
+              {posts.map(({ node: post }) => (
                 <div className='box is-my-3 is-mb-5' key={post.id}>
                   <div className='columns'>
                     <div className='column has-text-centered is-m-1 is-m-tablet-5'>
@@ -36,28 +36,28 @@ export default class BlogPage extends Component {
                     </div>
                   </div>
                 </div>
-              )}
+              ))}
             </div>
           </section>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
 BlogPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+      edges: PropTypes.array
+    })
+  })
+};
 
 export const blogPageQuery = graphql`
   query BlogPage {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "article-page" } } },
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "article-page" } } }
     ) {
       edges {
         node {
@@ -76,4 +76,4 @@ export const blogPageQuery = graphql`
       }
     }
   }
-`
+`;

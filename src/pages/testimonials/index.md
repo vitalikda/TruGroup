@@ -1,7 +1,7 @@
 ---
 templateKey: testimonials-page
 title: Testimonials
-meta_title: Testimonials | Tru Group
+meta_title: Tru | Testimonials
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
