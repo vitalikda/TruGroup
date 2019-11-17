@@ -8,17 +8,12 @@ const Tabs = () => (
     <div className='tabs is-right is-small'>
       <ul>
         <li>
-          <Link to='/' activeClassName='is-active'>
-            Social Responsibility
-          </Link>
-        </li>
-        <li>
           <a
             href='http://civicenterprise.co.network/'
             activeClassName='is-active'
             target='_blank'
           >
-            Charity Partner
+            Nonprofit Partner
           </a>
         </li>
         <li>
