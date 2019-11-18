@@ -1,13 +1,10 @@
 ---
 templateKey: 'contact-page'
-title: Get in Touch
+title: Tru | Contact Us
 subtitle: Questions, comments or requests? Feel free to reach out, we’d love to hear from you.
 meta_title: Tru | Contact Us
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Sapio Academy is the social responsibility program of Tru Group, offering scholarships and services to students around the world. It is a personal motivation and mentorship brand, created to promote the advancement of empathy, awareness, and acting with intention.
 contacts:
   - address: Unknown Address 1, 12312 World
     email: example@email.com

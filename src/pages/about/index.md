@@ -1,12 +1,9 @@
 ---
 templateKey: about-page
-title: Tru Group International
+title: Tru | Our Company
 meta_title: Tru | Our Company
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Sapio Academy is the social responsibility program of Tru Group, offering scholarships and services to students around the world. It is a personal motivation and mentorship brand, created to promote the advancement of empathy, awareness, and acting with intention.
 ---
 
 Presently the company has 10 independently branded social enterprises and entities established to directly impact a variety global industries. From consultation to education, Tru Group has a broad focus with a singular purpose: <span class="has-text-weight-bold">create services that ensure individual success and to improve industry standards</span>.

@@ -1,12 +1,9 @@
 ---
 templateKey: testimonials-page
-title: Testimonials
+title: Tru | Testimonials
 meta_title: Tru | Testimonials
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Sapio Academy is the social responsibility program of Tru Group, offering scholarships and services to students around the world. It is a personal motivation and mentorship brand, created to promote the advancement of empathy, awareness, and acting with intention.
 testimonials:
   - author: Muhammad Ahmed
     quote: >-
